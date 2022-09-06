@@ -23,4 +23,6 @@ function renderTranslateLanguage(language) {
       <p></p>
     </div>
   );
+  document.querySelector("#language-typed").appendChild(card);
+  document.querySelector("#display-all").appendChild(card);
 }
