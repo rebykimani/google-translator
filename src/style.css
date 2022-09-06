@@ -48,7 +48,7 @@
   width: 100%;
   background-color: blanchedalmond;
   margin: 0px;
-  height: 100vh;
+  height: 85vh;
   /* background-image: url(/assets/soul.png); */
 }
 .subText {
@@ -122,4 +122,22 @@
     font-size: 25px;
     margin-top: 2rem;
   }
+}
+.footer {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  margin-right: 3rem;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+.footer a:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #ed661f;
+}
+.footerBox {
+  margin-left: 10%;
+  width: 20%;
+  margin-left: 5%;
 }
