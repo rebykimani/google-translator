@@ -22,6 +22,10 @@ A user should be able to enter a word or a phrase and select the language they w
 
 # Installation
 
+### Click on the link provided bellow to view the site https://github.com/rebykimani/google-translator.git.
+
+### The project implements a public API for google-translator from https://rapidapi.com/googlecloud/api/google-translate1
+
 ## Requirements
 
 - ### Access to internet
