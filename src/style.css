@@ -55,22 +55,71 @@
   color: black;
 }
 .head {
-  color: aliceblue;
+  color: black;
   margin-left: 10rem;
 }
 .search-container {
   margin-top: 3rem;
-  margin-left: 10rem;
 }
-#language-typed {
-  color: aliceblue;
+.type-input {
+  width: 300px;
+  height: 30px;
 }
-#display-all {
-  color: aliceblue;
+#select-language {
+  width: 200px;
+  height: 30px;
 }
 #translated-text {
-  margin-left: 10rem;
   font-weight: bolder;
   font-size: 25px;
   margin-top: 2rem;
+}
+#typed-text {
+  font-weight: bolder;
+  font-size: 25px;
+  margin-top: 2rem;
+}
+#initial-lang {
+  font-weight: bolder;
+  font-size: 25px;
+  margin-top: 2rem;
+}
+@media only screen and (max-width: 600px) {
+  icon-bar {
+    display: block;
+    width: 22px;
+    height: 21px;
+    border-radius: 1px;
+  }
+
+  .head {
+    color: black;
+    margin-left: 3rem;
+  }
+  .search-container {
+    margin-top: 3rem;
+  }
+  .type-input {
+    width: 200px;
+    height: 30px;
+  }
+  #select-language {
+    width: 100px;
+    height: 30px;
+  }
+  #translated-text {
+    font-weight: bolder;
+    font-size: 25px;
+    margin-top: 2rem;
+  }
+  #typed-text {
+    font-weight: bolder;
+    font-size: 25px;
+    margin-top: 2rem;
+  }
+  #initial-lang {
+    font-weight: bolder;
+    font-size: 25px;
+    margin-top: 2rem;
+  }
 }

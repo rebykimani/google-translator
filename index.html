@@ -11,14 +11,22 @@
     <div class="container">
       <!--  START HEADER NAVIGATION-->
       <div class="header">
-        <div class="margin-left"></div>
-        <nav class="nav">
+        <div class="margin-left">
           <label class="logo">Language Translator</label>
+
+          <div class="col-md-3 col-sm-3 col-xs-3">
+                     <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+        </div>
+        <nav class="nav">
+
           <ul>
             <li><a class="nav-items" href="#">Home</a></li>
             <li><a class="nav-items" href="#">Languages</a></li>
-            <li><a class="nav-items" href="#">Counties</a></li>
-            <li><a class="nav-items" href="#">Contact Us</a></li>
+            <li><a class="nav-items" href="#">FAQ</a></li>
           </ul>
         </nav>
         <div class="margin-right"></div>
@@ -29,25 +37,25 @@
           Learn over 150 languages from different regions of the continent
         </h3>
         <h3 class="welcome">Welcome!</h3>
-      </div>
 
-      <div class="search-container">
-        <input
-          placeholder="Enter text and press Enter"
-          name="my-input"
-          width="50px"
-        />
-        <div style="display: 'flex'; flex-direction: 'row'">
-          <p id="typed-text" style="color: '#FFF'"></p>
-          <p id="initial-lang" style="color: '#FFF'"></p>
+        <div class="search-container">
+          <input
+            placeholder="Enter some text and press Enter"
+            name="my-input"
+            class="type-input"
+          />
+          <div style="display: 'flex'; flex-direction: 'row'">
+            <p id="typed-text" style="color: '#FFF'"></p>
+            <p id="initial-lang" style="color: '#FFF'"></p>
+          </div>
         </div>
-        <select placeholder="Select Language" id="select-language" width="10px">
+        <select placeholder="Select Language" id="select-language" width="20px">
           Select Language
         </select>
-        <button id="search" class="button">Translate</button>
+        <div id="translated-text"></div>
       </div>
-      <div id="translated-text"></div>
     </div>
+    <!-- makes ajax requests -->
     <script
       src="https://code.jquery.com/jquery-3.6.1.min.js"
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
