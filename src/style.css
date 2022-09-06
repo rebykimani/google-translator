@@ -3,6 +3,7 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+/*NAVBAR START*/
 .nav {
   height: 80px;
   width: 100%;
@@ -48,7 +49,10 @@
   background-color: blanchedalmond;
   margin: 0px;
   height: 100vh;
-  background-image: url(/assets/soul.png);
+  /* background-image: url(/assets/soul.png); */
+}
+.subText {
+  color: black;
 }
 .head {
   color: aliceblue;

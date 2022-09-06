@@ -32,22 +32,26 @@
       </div>
 
       <div class="search-container">
-        <input
-          class="input"
-          type="text"
-          placeholder="Type a word or a statement  ..."
-          id="user-input"
-          value=""
-        />
-        <select placeholder="Select Language" id="select-language">
+        <input placeholder="Enter some text" name="my-input" />
+        <div style="display: 'flex'; flex-direction: 'row'">
+          <p id="typed-text" style="color: '#FFF'"></p>
+          <p id="initial-lang" style="color: '#FFF'"></p>
+        </div>
+        <select placeholder="Select Language" id="select-language" width="10px">
           Select Language
         </select>
         <button id="search" class="button">Translate</button>
       </div>
+      <div id="translated-text"></div>
       <div id="language-typed"></div>
 
       <div id="display-all"></div>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
     <script src="src/index.js"></script>
   </body>
 </html>
