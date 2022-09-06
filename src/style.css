@@ -1,0 +1,66 @@
+* {
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.nav {
+  height: 80px;
+  width: 100%;
+  padding-top: 20px;
+  background-color: black;
+  color: aliceblue;
+}
+.logo {
+  font-size: 35px;
+  font-family: "Oleo Script", cursive;
+  font-weight: bolder;
+}
+.nav ul {
+  float: right;
+  justify-content: space-between;
+}
+.nav ul li {
+  display: inline-block;
+}
+
+.nav ul li a.active {
+  transition: 5s;
+  color: white;
+}
+.nav ul li a:hover {
+  color: white;
+  font-weight: bold;
+}
+.nav ul li a:hover {
+  text-decoration-line: underline;
+  text-decoration-color: #ed661f;
+}
+
+.nav-items {
+  padding: 15px;
+  font-size: 20px;
+  color: white;
+}
+
+/* NAVBAR END */
+.container {
+  width: 100%;
+  background-color: blanchedalmond;
+  margin: 0px;
+  height: 100vh;
+  background-image: url(/assets/soul.png);
+}
+.head {
+  color: aliceblue;
+  margin-left: 10rem;
+}
+.search-container {
+  margin-top: 3rem;
+  margin-left: 10rem;
+}
+#language-typed {
+  color: aliceblue;
+}
+#display-all {
+  color: aliceblue;
+}
