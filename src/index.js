@@ -84,9 +84,8 @@ function handleLanguageTranslate(e) {
   translateFunction(e.target.value);
 }
 
-//fetch request - detect
+//fetch/ajax request - detect
 
-// let result = document.getElementById("display-all");
 const headers = {
   "content-type": "application/x-www-form-urlencoded",
   "Accept-Encoding": "application/gzip",
@@ -119,7 +118,7 @@ const detectFunction = async (text) => {
     initialLanguage = resp;
   });
 };
-//fetch POST request
+//fetch/ajax POST request
 const translateFunction = async (text) => {
   const data = {};
   console.log("LANG TO TRANSLATE: ", text);
