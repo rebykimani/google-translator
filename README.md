@@ -16,7 +16,9 @@
 
 ## Description
 
-This is a website that shows my portfolio/resume. It contains all my background information, some sample projects that I have worked and the experience gained.
+This page helps users to translate words from one language to another.
+
+A user should be able to enter a word or a phrase and select the language they want to translate to then click on translate to get results.
 
 # Installation
 
@@ -27,12 +29,15 @@ This is a website that shows my portfolio/resume. It contains all my background 
 
 # Installation
 
-- ### HTML -used to build the distinct web pages.
-- ### CSS - used to style the HTML pages including the navbar.
+- ### HTML -used to build the distinct web page.
+- ### Javascript -used to add event listeners, fetch data from public API and return a response to the user.
+
+- ### CSS - used to style the HTML page including the navbar.
 - ### JavaScript - used to bring interactive features on the website
 
 # Reference
 
+- ### MDN Javascript
 - ### W3S
 - ### Free code Camp
 - ### materialize CSS
