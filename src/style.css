@@ -68,3 +68,9 @@
 #display-all {
   color: aliceblue;
 }
+#translated-text {
+  margin-left: 10rem;
+  font-weight: bolder;
+  font-size: 25px;
+  margin-top: 2rem;
+}
