@@ -87,7 +87,7 @@ function handleLanguageTranslate(e) {
 
 //fetch request - detect
 
-let result = document.getElementById("display-all");
+// let result = document.getElementById("display-all");
 const headers = {
   "content-type": "application/x-www-form-urlencoded",
   "Accept-Encoding": "application/gzip",
@@ -116,7 +116,7 @@ const detectFunction = async (text) => {
   $.ajax(settings).done(function (response) {
     console.log("RESPONSE FROM API CALL: ", response.data.detections);
     const resp = response.data.detections[0][0].language;
-    initialLang.textContent = languages[resp];
+    initialLang.textContent = `Language detected: ${languages[resp]}`;
     initialLanguage = resp;
   });
 };
@@ -144,6 +144,6 @@ const translateFunction = async (text) => {
   $.ajax(settings).done(function (response) {
     console.log("RESPONSE FROM API CALL: ", response.data);
     const resp = response.data.translations[0].translatedText;
-    translatedData.textContent = resp;
+    translatedData.textContent = `Translated Text: ${resp}`;
   });
 };
