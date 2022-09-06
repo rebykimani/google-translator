@@ -85,7 +85,7 @@ function handleLanguageTranslate(e) {
   translateFunction(e.target.value);
 }
 
-//fetch request
+//fetch request - detect
 
 let result = document.getElementById("display-all");
 const headers = {
@@ -120,7 +120,7 @@ const detectFunction = async (text) => {
     initialLanguage = resp;
   });
 };
-
+//fetch POST request
 const translateFunction = async (text) => {
   const data = {};
   console.log("LANG TO TRANSLATE: ", text);
