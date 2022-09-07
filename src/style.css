@@ -94,12 +94,13 @@
   height: 20px;
   justify-items: flex-end;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
   icon-bar {
     display: block;
     width: 22px;
     height: 21px;
     border-radius: 1px;
+    margin-top: -5rem;
   }
 
   .head {
@@ -143,6 +144,7 @@
   font-size: 15px;
 }
 .footer a:hover {
+  color: black;
   text-decoration-line: underline;
   text-decoration-color: #ed661f;
 }
