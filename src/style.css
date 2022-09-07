@@ -84,6 +84,11 @@
   font-size: 25px;
   margin-top: 2rem;
 }
+.event-log {
+  width: 50%;
+  height: 20px;
+  justify-items: flex-end;
+}
 @media only screen and (max-width: 600px) {
   icon-bar {
     display: block;

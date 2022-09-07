@@ -1,4 +1,3 @@
-//add event listeners
 const languages = {
   sw: "Swahili",
   af: "Afrikaans",
