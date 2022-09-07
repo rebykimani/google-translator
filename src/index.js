@@ -170,4 +170,31 @@ const translateFunction = async (text) => {
   //   const resp = response.data.translations[0].translatedText;
   //   translatedData.textContent = `Translated Text: ${resp}`;
   // });
+  const encodedParams = new URLSearchParams();
+  encodedParams.append("q", `${textToDetect}`);
+  encodedParams.append("target", text);
+  encodedParams.append("source", initialLanguage);
+
+  const options = {
+    method: "POST",
+    headers: {
+      "content-type": "application/x-www-form-urlencoded",
+      "Accept-Encoding": "application/gzip",
+      "X-RapidAPI-Key": "a864d1ff18msh4ad633aeb1d688bp1d0d99jsnbce0d56743d1",
+      "X-RapidAPI-Host": "google-translate1.p.rapidapi.com",
+    },
+    body: encodedParams,
+  };
+
+  fetch(
+    "https://google-translate1.p.rapidapi.com/language/translate/v2",
+    options
+  )
+    .then((response) => response.json())
+    .then((response) => {
+      console.log(response);
+      const resp = response.data.translations[0].translatedText;
+      translatedData.textContent = `Translated Text: ${resp}`;
+    })
+    .catch((err) => console.error(err));
 };
