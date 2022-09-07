@@ -18,7 +18,7 @@
 
 This page helps users to translate words from one language to another.
 
-A user should be able to enter a word or a phrase and select the language they want to translate to then click on translate to get results.
+A user should be able to enter a word or a phrase, enter using keyboard prompt, select the language they want to translate to then results will be displayed.
 
 # Installation
 
