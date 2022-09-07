@@ -96,10 +96,31 @@ const headers = {
 const detectFunction = async (text) => {
   const data = {};
   console.log("DATA TO DETECT: ", text);
-  const settings = {
-    async: true,
-    crossDomain: true,
-    url: "https://google-translate1.p.rapidapi.com/language/translate/v2/detect",
+  // const settings = {
+  //   async: true,
+  //   crossDomain: true,
+  //   url: "https://google-translate1.p.rapidapi.com/language/translate/v2/detect",
+  //   method: "POST",
+  //   headers: {
+  //     "content-type": "application/x-www-form-urlencoded",
+  //     "Accept-Encoding": "application/gzip",
+  //     "X-RapidAPI-Key": "a864d1ff18msh4ad633aeb1d688bp1d0d99jsnbce0d56743d1",
+  //     "X-RapidAPI-Host": "google-translate1.p.rapidapi.com",
+  //   },
+  //   data: {
+  //     q: `${text}`,
+  //   },
+  // };
+  // $.ajax(settings).done(function (response) {
+  //   console.log("RESPONSE FROM API CALL: ", response.data.detections);
+  //   const resp = response.data.detections[0][0].language;
+  //   initialLang.textContent = `Language detected: ${languages[resp]}`;
+  //   initialLanguage = resp;
+  // });
+  const encodedParams = new URLSearchParams();
+  encodedParams.append("q", `${text}`);
+
+  const options = {
     method: "POST",
     headers: {
       "content-type": "application/x-www-form-urlencoded",
@@ -107,41 +128,46 @@ const detectFunction = async (text) => {
       "X-RapidAPI-Key": "a864d1ff18msh4ad633aeb1d688bp1d0d99jsnbce0d56743d1",
       "X-RapidAPI-Host": "google-translate1.p.rapidapi.com",
     },
-    data: {
-      q: `${text}`,
-    },
+    body: encodedParams,
   };
-  $.ajax(settings).done(function (response) {
-    console.log("RESPONSE FROM API CALL: ", response.data.detections);
-    const resp = response.data.detections[0][0].language;
-    initialLang.textContent = `Language detected: ${languages[resp]}`;
-    initialLanguage = resp;
-  });
+
+  fetch(
+    "https://google-translate1.p.rapidapi.com/language/translate/v2/detect",
+    options
+  )
+    .then((response) => response.json())
+    .then((response) => {
+      console.log(response);
+      const resp = response.data.detections[0][0].language;
+      initialLang.textContent = `Language detected: ${languages[resp]}`;
+      initialLanguage = resp;
+    })
+    .catch((err) => console.error(err));
 };
 //fetch/ajax POST request
 const translateFunction = async (text) => {
   const data = {};
   console.log("LANG TO TRANSLATE: ", text);
-  const settings = {
-    async: true,
-    crossDomain: true,
-    url: "https://google-translate1.p.rapidapi.com/language/translate/v2",
-    method: "POST",
-    headers: {
-      "content-type": "application/x-www-form-urlencoded",
-      "Accept-Encoding": "application/gzip",
-      "X-RapidAPI-Key": "a864d1ff18msh4ad633aeb1d688bp1d0d99jsnbce0d56743d1",
-      "X-RapidAPI-Host": "google-translate1.p.rapidapi.com",
-    },
-    data: {
-      q: `${textToDetect}`,
-      source: initialLanguage,
-      target: text,
-    },
-  };
-  $.ajax(settings).done(function (response) {
-    console.log("RESPONSE FROM API CALL: ", response.data);
-    const resp = response.data.translations[0].translatedText;
-    translatedData.textContent = `Translated Text: ${resp}`;
-  });
+  // const settings = {
+  //   async: true,
+  //   crossDomain: true,
+  //   url: "https://google-translate1.p.rapidapi.com/language/translate/v2",
+  //   method: "POST",
+  //   headers: {
+  //     "content-type": "application/x-www-form-urlencoded",
+  //     "Accept-Encoding": "application/gzip",
+  //     "X-RapidAPI-Key": "a864d1ff18msh4ad633aeb1d688bp1d0d99jsnbce0d56743d1",
+  //     "X-RapidAPI-Host": "google-translate1.p.rapidapi.com",
+  //   },
+  //   data: {
+  //     q: `${textToDetect}`,
+  //     source: initialLanguage,
+  //     target: text,
+  //   },
+  // };
+  // $.ajax(settings).done(function (response) {
+  //   console.log("RESPONSE FROM API CALL: ", response.data);
+  //   const resp = response.data.translations[0].translatedText;
+  //   translatedData.textContent = `Translated Text: ${resp}`;
+  // });
 };
