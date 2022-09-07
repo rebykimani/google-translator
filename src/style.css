@@ -52,7 +52,7 @@
   /* background-image: url(/assets/soul.png); */
 }
 .subText {
-  color: black;
+  color: purple;
 }
 .head {
   color: black;
@@ -60,6 +60,9 @@
 }
 .search-container {
   margin-top: 3rem;
+}
+.welcome {
+  color: purple;
 }
 .type-input {
   width: 300px;
@@ -73,6 +76,7 @@
   font-weight: bolder;
   font-size: 25px;
   margin-top: 2rem;
+  color: purple;
 }
 #typed-text {
   font-weight: bolder;
