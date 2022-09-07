@@ -1,5 +1,5 @@
 * {
-  list-style-type: none;
+  /* list-style-type: none; */
   text-decoration: none;
   box-sizing: border-box;
 }
@@ -89,10 +89,55 @@
   font-size: 25px;
   margin-top: 2rem;
 }
-.event-log {
-  width: 50%;
-  height: 20px;
-  justify-items: flex-end;
+.rating-service {
+  background-color: wheat;
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  font-size: 22px;
+}
+.comment {
+  width: 40%;
+  margin-left: 5%;
+}
+.testimonials {
+  width: 40%;
+  margin-left: 5%;
+}
+#rating-list {
+  /* text-align: center; */
+  color: purple;
+}
+#rating-form {
+  text-align: center;
+  color: purple;
+}
+.button {
+  border-radius: 20px;
+  padding: 10px;
+  background-color: purple;
+  color: aliceblue;
+  font-size: 16px;
+}
+
+.footer {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  margin-right: 3rem;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+}
+.footer a:hover {
+  color: black;
+  text-decoration-line: underline;
+  text-decoration-color: #ed661f;
+}
+.footerBox {
+  margin-left: 10%;
+  width: 40%;
+  /* margin-left: 5%; */
 }
 @media only screen and (max-width: 500px) {
   icon-bar {
@@ -133,23 +178,34 @@
     font-size: 25px;
     margin-top: 2rem;
   }
-}
-.footer {
-  width: 100%;
-  flex-direction: row;
-  display: flex;
-  margin-right: 3rem;
-  background-color: black;
-  color: white;
-  font-size: 15px;
-}
-.footer a:hover {
-  color: black;
-  text-decoration-line: underline;
-  text-decoration-color: #ed661f;
-}
-.footerBox {
-  margin-left: 10%;
-  width: 40%;
-  margin-left: 5%;
+  .rating-service {
+    background-color: wheat;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    font-size: 22px;
+  }
+  .comment {
+    width: 40%;
+    margin-left: 5%;
+  }
+  .testimonials {
+    width: 40%;
+    margin-left: 5%;
+  }
+  #rating-list {
+    /* text-align: center; */
+    color: purple;
+  }
+  #rating-form {
+    text-align: center;
+    color: purple;
+  }
+  .button {
+    border-radius: 20px;
+    padding: 10px;
+    background-color: purple;
+    color: aliceblue;
+    font-size: 16px;
+  }
 }

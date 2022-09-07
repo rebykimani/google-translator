@@ -197,3 +197,12 @@ const translateFunction = async (text) => {
     })
     .catch((err) => console.error(err));
 };
+
+document.getElementById("rating-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const form = e.target;
+  document.getElementById(
+    "rating-list"
+  ).innerHTML += `<li>${form.rating.value}</li>`;
+  form.reset();
+});
